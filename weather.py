@@ -12,7 +12,7 @@ for line in email_file:
 def send_message():
     client = TwilioRestClient()
     client.messages.create(from_='5512259960',to = '5512259960',body = 'Ahoy from Twilio!')
-
+   ##
 
 def get_weather_forecast():
     url = 'http://api.openweathermap.org/data/2.5/weather?id=1259229&units=metric&APPID=****'
