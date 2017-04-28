@@ -1,4 +1,3 @@
-from twilio.rest import TwilioRestClient
 
 import requests
 email = []
@@ -9,10 +8,7 @@ for line in email_file:
 
     email.append(line.strip())      # removing the new line between two emails
 
-def send_message():
-    client = TwilioRestClient()
-    client.messages.create(from_='5512259960',to = '5512259960',body = 'Ahoy from Twilio!')
-   ##
+
 
 def get_weather_forecast():
     url = 'http://api.openweathermap.org/data/2.5/weather?id=1259229&units=metric&APPID=****'
@@ -35,5 +31,4 @@ def main():
 
 
     get_weather_forecast()
-    send_message()
 main()
